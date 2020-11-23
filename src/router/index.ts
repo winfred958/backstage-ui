@@ -1,6 +1,7 @@
-import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
-import Login from "../components/customer/Login.vue"
+import Login from '../components/customer/Login.vue'
+import ItemList from '../components/customer/ItemList.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,9 +18,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: "/login",
-    name: "login",
+    path: '/login',
+    name: 'login',
     component: Login
+  },
+  {
+    path: '/itemList',
+    name: 'itemList',
+    component: ItemList
   }
 ]
 

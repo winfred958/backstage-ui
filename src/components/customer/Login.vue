@@ -4,6 +4,7 @@
     <br><br>
     密码： <input type="password" v-model="loginForm.password" placeholder="请输入密码"/>
     <br><br>
+    <p>{{loginForm.username}}</p>
     <button v-on:click="login">登录</button>
   </div>
 </template>
@@ -22,7 +23,7 @@
     },
     methods: {
       login () {
-        this.$axi
+        return true
       }
     }
   }
