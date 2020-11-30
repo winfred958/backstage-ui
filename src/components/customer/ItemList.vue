@@ -1,6 +1,7 @@
 <template>
 
   <p>{{name}}</p>
+  <button @click="this.getItemList()">getItemList</button>
   <ul>
     <transition-group name="list" tag="p">
       <li v-for="(item, index) of items" :key="item.item_sn">
@@ -8,7 +9,6 @@
       </li>
     </transition-group>
   </ul>
-  <button @click="this.getItemList()">getItemList</button>
 </template>
 
 <script>
